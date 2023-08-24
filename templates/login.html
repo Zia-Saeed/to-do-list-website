@@ -1,0 +1,28 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% include "header.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <li style="font-size:20px; color:cyan">{{message}}</li>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+<span>
+    <h1 >Log in to save and access your lists</h1>
+    <p>New to Flask.io? <a href="{{url_for('signup')}}"><strong>Sign up here to save your lists</strong></a>.</p>
+    {{ wtf.quick_form(login, novalidate=True, button_map={"submit": "secondary"}) }}
+</span>
+
+
+
+
+
+
+
+
+{% endblock %}
+{% include "footer.html" %}

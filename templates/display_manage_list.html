@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+{% include "header.html" %}
+{% block content %}
+        {% for key, value in dic.items() %}
+          <div style="margin:5px 0px 3px 10px">
+              <ul style="margin-top:5px">
+                <li><p style="margin:4px 0px 2px 0px;  font-size:20px; ">{{value}}</p></li>
+                <a style="text-decoration:none;color-white" href="{{url_for('done_list', id=key)}}"><button style="color:white" class="btn btn-success btn-success-outline  mx-4">Done</button></a>
+              </ul>
+          </div>
+              <hr>
+        {% endfor %}
+{% endblock %}
+{% include "footer.html" %}

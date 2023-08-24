@@ -1,0 +1,26 @@
+{% include "header.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='about.css')}}">
+    <main>
+        <section class="about-section">
+            <h2>Welcome to Our Website</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec arcu eget tellus maximus interdum. Sed sagittis ante vel justo viverra, in luctus quam tincidunt. Quisque pellentesque nunc nec dui blandit blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam mollis, turpis vitae feugiat rhoncus, arcu odio convallis metus, nec aliquam ex nulla vitae nulla.</p>
+        </section>
+
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <div class="team-member">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.zzJ0o0APrY6dz5RwMK3y-wHaE7&pid=Api&P=0&h=180" alt="Team Member 1">
+                <h3>Zia Saeed</h3>
+                <p>Co-founder</p>
+            </div>
+            <div class="team-member">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.UZhDvOwfyNK_HJdmCyXirQHaHa&pid=Api&P=0&h=180" alt="Team Member 2">
+                <h3>Zia Saeed</h3>
+                <p>Lead Developer</p>
+            </div>
+            <!-- Add more team members as needed -->
+        </section>
+    </main>
+{% endblock %}
+{% include "footer.html" %}

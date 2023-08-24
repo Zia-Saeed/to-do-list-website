@@ -1,0 +1,15 @@
+{% include "header.html" %}
+{% block content %}
+<h1>My saved lists</h1>
+<link rel="stylesheet" href="{{url_for('static', filename='manage.css')}}">
+
+
+
+
+    <ul>
+{% for key, value in to_do.items() %}
+        <a style="margin-left:20px; text-decoration:none; color:green;" href="{{url_for('manage_display', dit=value)}}"><li style="margin-left:20px;">My to-do list {{key}}</li></a> <br>
+{% endfor %}
+    </ul>
+{% endblock %}
+{% include "footer.html" %}

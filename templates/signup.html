@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% include "header.html" %}
+
+{% block content %}
+<span>
+    {{ wtf.quick_form(signup, novalidate=True, button_map={"submit": "secondary"}) }}
+
+</span>
+<a style="text-decoration:none; color:green; " href="{{url_for('login')}}">Already have account</a>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+{% include "footer.html" %}

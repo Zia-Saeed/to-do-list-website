@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+  <section class="top">
+  <div class="user-nav">
+  {% if current_user.is_authenticated %}
+  <a id="header-lists-link" href="{{url_for('manage_list')}}"><i class="icon-list"></i> Manage lists</a>
+  <a class="modal-toggle" data-modal="#save-modal"  href="{{url_for('home')}}"><i class="icon-plus"></i> New List</a>
+    <a id="" href="{{url_for('manage_list')}}"><i class="icon-user"></i> zia.aseh@gmail.com</a>
+    <a  href="{{url_for('logout')}}"><i class="icon-user"></i>Logout</a>
+
+    {% elif not current_user.is_authenticated %}
+      <a class="modal-toggle" data-modal="#save-modal" href="{{url_for('signup')}}"><i class="icon-plus"></i>SignUp</a>
+      <a class="modal-toggle" data-modal="#save-modal" href="{{url_for('login')}}"><i class="icon-plus"></i>Login</a>
+    {% endif %}
+  </div>
+  </section>
+    <header>
+    <nav class="header-nav left" id="mobile-nav-toggle">
+
+    </nav>
+    <div class="logo" style="text-align:center;">Flask</div>
+    </header>

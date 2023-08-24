@@ -1,0 +1,64 @@
+/* General styling for the sidebar */
+.sidebar {
+  width: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Styling for the logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #007dbf;
+}
+
+/* Styling for the lists navigation */
+.lists-nav {
+  margin-top: 10px;
+}
+
+.lists-nav a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lists-nav a.active {
+  background-color: #007dbf;
+  color: #f9f9f9;
+}
+
+.lists-nav a:hover {
+  background-color: #007dbf;
+  color: #f9f9f9;
+}
+
+/* Styling for the right arrow icon */
+.lists-nav .icon-chevron-right {
+  float: right;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Adding a badge to the "My to-do list" link */
+.lists-nav a b {
+  background-color: #007dbf;
+  color: #f9f9f9;
+  padding: 5px 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+  }
+}
